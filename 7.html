@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Test(a,b,c){
+			var d = 1;
+			this.a = a;
+			this.b = b;
+			this.c = c;
+			function f(){
+				d++;
+				console.log(d);
+			}
+			this.g = f;
+		}
+		var test1 = new Test();
+		test1.g();
+		test1.g();
+		var test2 = new Test();
+		test2.g();
+
+		function Compute(){
+			var args = arguments,
+			res;
+			this.plus = function(){
+				res = 0;
+				loop(arguments,'add',res);
+			}
+			this.times = function(){
+				res = 1;
+				loop(arguments,'mul',res);
+			}
+			function loop(args,method,res){
+				for(var i = 0; i<args.length;i++){
+					var item = args[i];
+					if(method === 'add'){
+						res += item;
+					}else if(method === 'mul'){
+						res *= item;
+					}
+				}
+				console.log(res);
+			}
+}
+      var compute = new Compute();
+      compute.plus(2,4,6);
+      compute.times(3,5,7);
+
+
+      function Car(opt){
+      	this.brand = opt.brand;
+      	this.color = opt.color;
+      	this.displacement = opt.displacement;
+      }
+      function Person(opt){
+      	this.name = opt.name;
+      	this.age = opt.age;
+      	this.income = opt.income;
+      	this.selectCar = function(){
+      		var myCar = new Car(opt.carOpt);
+      		console.log(this.name + '挑选了一辆排量为'+myCar.displacement+'的'+myCar.color +myCar.brand);
+      	}
+      }
+      var jone = new Person({
+      	name:"陈娟",
+      	age:29,
+      	income:'20K',
+      	carOpt:{
+      		brand:'马自达',
+      		color:"红色",
+      		displacement:'2.0'
+
+     	}
+      });
+      join.selectCar();
+	</script>
+</body>
+</html>

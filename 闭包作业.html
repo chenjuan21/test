@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function myClass(){
+			var students = [];
+			var operations = {
+				join:function(name){
+					students.push(name);
+					console.log(students);
+				},
+				leave:function(name){
+					// for(var i = 0;i<students.length;i++){
+					// 	var item = students[i];//这样赋值可以提高性能
+					// 	if(item === name){
+					// 		students.splice(i,1);
+					// 		console.log(students);
+					// 	}
+					// }
+					var idx = students.indexOf(name);
+					if(idx != -1){
+						students.splice(idx,1);
+					}
+				}
+			}
+			return operations;
+		}
+		var obj = myClass();
+		obj.join("陈娟");
+		obj.join("王劼克");
+		obj.leave("陈娟");
+
+		function Car(color,brand){
+			this.color = color;
+			this.brand = brand;
+			this.drive = function(){
+				console.log("I am running");
+			}
+		}
+		var car = new Car('red','Mazda');
+		console.log(car.color);
+		console.log(car.brand);
+		car.drive();
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课时4</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//最基本的函数的写法 ->函数声明
+	// function test(参数){ //函数只有被调用的时候才执行
+	// 	//函数的执行语句；
+	// }
+
+	//var a=b=1;错误写法
+
+	//2.表达式 字面量
+	var test = function test1(){
+		var a = 1;
+		//console.log(a);
+	}
+	test();
+
+function test1(a,b){
+	//console.log(arguments);//实参的值
+	//console.log(test1.length);//形参的长度
+}
+test1(1,2);
+
+//实参求和
+
+function sum(){
+  var a = 0;
+  for(var i=0;i<arguments.length;i++){
+  	a += arguments[i];
+  }	
+ // console.log(a);
+}
+sum(1,2,3,4,5);
+
+function test2(a,b){//在实参里传入了值，函数内部可以改变，实参里没有传值函数里无法赋值
+	a = 3;
+	console.log(arguments[0]);
+}
+test2(1,2);
+</script>
+</html>

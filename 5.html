@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//	var obj = {
+	//		name:"蓝轨迹",
+//			address:"北京",
+//			teach:function(){
+//
+//			}
+		//}
+
+		// (function(){
+		// 	var a =3,
+		// 	b=2;
+		// 	console.log(a+b);
+		// })()
+		//(function(){}())//符合W3C规范
+
+		// (function(a,b){
+		// 	var a,b;
+		// 	console.log(a+b);
+		// })(1,2)
+
+		// var num = (function(a,b){
+		// 	return a+b;
+		// })(1,4)
+		// console.log(num);
+
+		function test(){
+			var arr = [];
+			for(var i=0;i<10;i++){
+				 arr[i]=(function(j){
+					console.log(i);
+				})(i)
+			}
+			return arr;
+		}
+		var myarr = test();
+		// console.log(myarr);  underfined
+		for(var j=0;j<10;j++){
+			myarr[j];
+		}
+		// function test(){
+  //         var n = 10;
+  //         function a(){
+  //         	console.log(n);
+  //         }
+  //         function b(){
+  //         	n++;
+  //         	console.log(n);
+  //         }
+  //         return [a,b];
+		// }
+		// var c = test();
+		// c[0]();
+		// c[1]();
+	</script>
+
+</body>
+</html>

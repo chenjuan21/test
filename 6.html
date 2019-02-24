@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+		var oLi = document.querySelectorAll("li");
+		var arr =[];
+		for(var i=0;i<oLi.length;i++){
+          	(function(j){
+          		 oLi[j].onclick=function(){
+           	console.log(j);
+           }
+          	})(i)
+         
+		}
+
+		console.log(function b(){});
+		var a=10;
+		if(function b(){}){
+            a+=typeof(b);
+		}
+		console.log(a); //10underfined
+		(function b(){})是一个表达式，忽略函数名
+	</script>
+</body>
+</html>

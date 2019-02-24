@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课程一作业</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var day = window.prompt("请输入周几");
+		var time = window.prompt("请输入上午或下午");
+		var action;
+
+		switch(time){
+			case '上午':
+			   action = "今天是"+day+",上午去游乐园";
+			   break;
+			case '下午':
+			   action = "今天是"+day+",下午去学跆拳道";
+			   break;
+			   default:
+			   action = "";
+
+		}
+		console.log(action);
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=5;
+        a--;
+		console.log(a);
+		var score = 93;
+		if(score >= 90){
+			console.log('a');
+		}else if(score >= 80 && score <90){
+			console.log("b");
+		}else if(score >=70 && scroe <80){
+			console.log("c");
+		}else if(score >=60 && score <70){
+			console.log("d");
+		}else{
+			console.log("您的成绩不合格");
+		}
+
+
+		var city = window.prompt('请输入您所在的地区');
+		switch(city){
+			case '北京':
+			console.log('15K');
+			break;
+			case '上海':
+			console.log('12k');
+			break;
+			case '广州':
+			console.log('11k');
+			break;
+			default:
+			 console.log('9k');
+		}
+
+		switch(true){
+			case score >= 90 && score<100:
+			console.log('a');
+			break;
+			case score >= 80 && score <90:
+			console.log("b");
+			break;
+			case score >=70 && score <80:
+			console.log("c");
+			break;
+			default:
+			 console.log("d");
+		}
+	</script>
+</body>
+</html>

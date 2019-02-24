@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function test(a=1,b=2){
+			console.log(a);
+			console.log(b)
+		}
+		//test();
+		function test1(a=1,b){
+			console.log(a);
+			console.log(b)
+		}
+		//test1(undefined,2)
+
+		//递归 n的阶乘
+		function fact(n){
+			if(n===1){
+				return 1;
+			}
+			return n * fact(n-1);
+		}
+		//console.log(fact(5));
+
+		var a=1;
+		b=2;
+		//console.log(window.b);
+		//a =window.a;
+		//b=window.b;
+		window = {
+			a:1,
+			b:2
+		}
+
+		var a = 1;
+		function a(){
+			console.log(2)
+		}
+   //   console.log(a);
+
+      //GO global object 全局上下文
+      //1、找变量
+      //2、找函数声明
+      //3,执行
+
+
+      a=1;
+      function test(){
+      	console.log(a);
+      	a=2;
+      	console.log(a);
+      	var a=3;
+      	console.log(a);
+      }
+     // test();
+     // var a;
+
+      //GO={
+      //	a:undefined 变量声明提升
+      //	function test(){...}
+
+     // }
+
+     // AO={
+     //   a:undefined
+
+    // }
+function q1(){
+	return a;
+	a=1;
+	function a(){}
+	var a = 2;
+
+}
+//console.log(q1());
+
+function q2(){
+	a = 1;
+	function a(){}
+	var a=2;
+	return a;
+}
+
+//console.log(q2());
+
+a=1;
+function q3(e){
+	function e(){}
+	arguments[0]=2;
+	console.log(e);
+	if(a){
+		var b=3;
+	}
+	var c;
+	a=4;
+	var a;
+	console.log(b);
+	f=5;
+	console.log(c);
+	console.log(a);
+
+}
+
+var a;
+q3(1);
+	</script>
+</body>
+</html>

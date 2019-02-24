@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var i=1;
+		for( ; i;){
+		//	console.log(i);
+			i++;
+			if(i ==11){
+				break;  //i=0 跳出循环
+			}
+		}
+
+
+
+		var sum =0;
+		for(var i=0;i<100;i++){
+			sum +=i;
+			if(sum >=100){
+				break;
+			}
+			//console.log(i,sum);
+		}
+
+
+		for(var i=0;i<100;i++){
+			if(i%7 == 0 || i%10 == 7){
+               continue; //跳过本次循环，执行下一次循环
+			}
+			//console.log(i);
+		}
+
+
+		var i=100;
+		for( ; i-- ;){
+			//console.log(i);
+		}
+
+		var num = 798;
+		var a = num % 10;
+		var b = (num - a) % 100 / 10;
+		var c = (num - a - b*10)/100;
+		var newnum = ""+a+b+c;
+		// console.log(newnum);
+
+
+
+
+		var person = {
+			name : "cj"
+		}
+
+		var num1 = parseFloat('4.1515926');
+		//console.log(num1.toFixed(2));
+
+       //隐式类型转换
+		var a ='123';
+		a++;
+		//console.log(a); 124
+
+		//显式转换
+		
+		var a = null; //0   undefined = NaN
+		console.log(typeof(Number(a))+'-'+Number(a));
+
+	</script>
+</body>
+</html>
